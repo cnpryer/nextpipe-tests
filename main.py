@@ -5,7 +5,7 @@ import os
 import nextmv
 import nextmv.cloud
 
-from nextpipe import AppOption, AppRunConfig, FlowSpec, app, foreach, join, needs, step
+from nextpipe import AppOption, AppRunConfig, FlowSpec, foreach, join, needs, step
 
 
 class Flow(FlowSpec):
@@ -19,7 +19,6 @@ class Flow(FlowSpec):
         run_configs = [AppRunConfig(input, [AppOption("param", i)]) for i, input in enumerate(inputs)]
         return run_configs
 
-    @app(app_id="echo")
     @needs(predecessors=[prepare])
     @step
     def solve():
