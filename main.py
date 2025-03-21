@@ -3,7 +3,6 @@ import json
 import os
 
 import nextmv
-import nextmv.cloud
 
 from nextpipe import FlowSpec, foreach, join, needs, step
 
