@@ -1,0 +1,7 @@
+type: python
+runtime: ghcr.io/nextmv-io/runtime/python:3.11
+pre-push: uv export --format requirements-txt --output-file requirements.txt --no-dev --no-editable --no-hashes
+python:
+  pip-requirements: requirements.txt
+files:
+  - main.py

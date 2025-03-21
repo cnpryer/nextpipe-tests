@@ -1,0 +1,18 @@
+[project]
+name = "nextpipe-tests"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "nextmv>=0.18.1",
+    "nextpipe",
+]
+
+[tool.uv.sources]
+nextpipe = { git = "https://github.com/nextmv-io/nextpipe", branch = "merschformann/simplify-step-execution" }
+
+[dependency-groups]
+dev = [
+    "pip>=25.0.1",
+]
