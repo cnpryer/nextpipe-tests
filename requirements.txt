@@ -10,7 +10,7 @@ marshmallow==3.26.1
 multiprocess==0.70.17
 mypy-extensions==1.0.0
 nextmv==0.18.1
-nextpipe @ git+https://github.com/nextmv-io/nextpipe@7cf4e4876b722d284a245e6f8759a126db75695a
+nextpipe==0.1.0.dev5
 packaging==24.2
 pathos==0.3.3
 pox==0.3.5

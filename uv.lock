@@ -128,13 +128,17 @@ wheels = [
 
 [[package]]
 name = "nextpipe"
-version = "0.1.0.dev6"
-source = { git = "https://github.com/nextmv-io/nextpipe?branch=merschformann%2Fsimplify-step-execution#7cf4e4876b722d284a245e6f8759a126db75695a" }
+version = "0.1.0.dev5"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "dataclasses-json" },
     { name = "nextmv" },
     { name = "pathos" },
     { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/f1/e3/a090b3b22abf665a62de720dbf2fb43b8bfe918203f9a7cba209c88cf77d/nextpipe-0.1.0.dev5.tar.gz", hash = "sha256:8b2632be4a53a22359c5831a1b9656c82e71a6d084f57459dbe18a406a2b199f", size = 16277 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/42/58/f4861b99157e3844d569bc317095dcfcdbec25af192e78c3580275748358/nextpipe-0.1.0.dev5-py3-none-any.whl", hash = "sha256:d0465e0606a147ee1a1af593cf8013ce4757436f8f0d4540686beee66bcb4c20", size = 13094 },
 ]
 
 [[package]]
@@ -154,7 +158,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "nextmv", specifier = ">=0.18.1" },
-    { name = "nextpipe", git = "https://github.com/nextmv-io/nextpipe?branch=merschformann%2Fsimplify-step-execution" },
+    { name = "nextpipe", specifier = "==0.1.0.dev5" },
 ]
 
 [package.metadata.requires-dev]

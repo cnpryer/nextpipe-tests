@@ -4,11 +4,10 @@ import os
 
 import nextmv
 
-from nextpipe import FlowSpec, foreach, join, needs, step
+from nextpipe import FlowSpec, needs, step
 
 
 class Flow(FlowSpec):
-    @foreach()  # Run the successor step for each item in the result list of this step
     @step
     def prepare(data: dict):
         """
@@ -26,7 +25,6 @@ class Flow(FlowSpec):
         pass
 
     @needs(predecessors=[solve])
-    @join()  # Collect the results from the previous 'foreach' step and combine them into a list passed as the arg
     @step
     def merge(results: list[dict]):
         """Merges the results."""

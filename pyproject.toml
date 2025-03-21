@@ -6,11 +6,8 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "nextmv>=0.18.1",
-    "nextpipe",
+    "nextpipe==0.1.0.dev5",
 ]
-
-[tool.uv.sources]
-nextpipe = { git = "https://github.com/nextmv-io/nextpipe", branch = "merschformann/simplify-step-execution" }
 
 [dependency-groups]
 dev = [
