@@ -5,7 +5,7 @@ import os
 import nextmv
 import nextmv.cloud
 
-from nextpipe import AppOption, AppRunConfig, FlowSpec, foreach, join, needs, step
+from nextpipe import FlowSpec, foreach, join, needs, step
 
 
 class Flow(FlowSpec):
@@ -16,8 +16,7 @@ class Flow(FlowSpec):
         Creates 3 copies of the input and configures them for 3 different app parameters.
         """
         inputs = [copy.deepcopy(data) for _ in range(3)]
-        run_configs = [AppRunConfig(input, [AppOption("param", i)]) for i, input in enumerate(inputs)]
-        return run_configs
+        return inputs
 
     @needs(predecessors=[prepare])
     @step
